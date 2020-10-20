@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class WaveSpawnerScript : MonoBehaviour
 {
 
-    public static int enemyCounter = 0;
+    public static int enemyCounter;
     public WaveClassScript[] waves;
     public Transform startSpawnPoint;
     public Text countdownText;
@@ -15,6 +15,13 @@ public class WaveSpawnerScript : MonoBehaviour
     private float countdown = 2f;
     private int waveNumber = 0;
 
+
+    private void Start()
+    { 
+        enemyCounter = 0;
+    }
+         
+    
     private void Update()
     {
         if (PlayerInfoScript.lives <= 0)

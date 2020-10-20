@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\LevelSelectorScript.cs" />
     <Compile Include="Assets\Scripts\BuildManagerScript.cs" />
     <Compile Include="Assets\Scripts\BulletScript.cs" />
     <Compile Include="Assets\Scripts\CameraControllerScript.cs" />
