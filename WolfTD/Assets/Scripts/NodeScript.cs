@@ -79,7 +79,7 @@ public class NodeScript : MonoBehaviour
 
         if (currentTurret != null)
         {
-            buildManager.selectNode(this);
+            buildManager.SelectNode(this);
             return;
         }
 

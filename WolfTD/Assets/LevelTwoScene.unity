@@ -7470,6 +7470,7 @@ MonoBehaviour:
   startSpawnPoint: {fileID: 1133078731}
   countdownText: {fileID: 2091455672}
   defaultTimer: 5
+  gameManager: {fileID: 588463375}
 --- !u!4 &588463372
 Transform:
   m_ObjectHideFlags: 0
@@ -7514,7 +7515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingCurrency: 999
-  startingLives: 5
+  startingLives: 10
 --- !u!114 &588463375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7528,6 +7529,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 1768536654}
+  nextLevel: LevelTwoScene
+  nextLevelInt: 2
+  sceneFader: {fileID: 1830987053}
 --- !u!114 &588463376
 MonoBehaviour:
   m_ObjectHideFlags: 0

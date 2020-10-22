@@ -11,6 +11,7 @@ public class WaveSpawnerScript : MonoBehaviour
     public Transform startSpawnPoint;
     public Text countdownText;
     public float defaultTimer = 5f;
+    public GameManagerScript gameManager;
 
     private float countdown = 2f;
     private int waveNumber = 0;
@@ -51,6 +52,7 @@ public class WaveSpawnerScript : MonoBehaviour
         
         PlayerInfoScript.waveCounter++;
         WaveClassScript wave = waves[waveNumber];
+        enemyCounter = wave.spawnCount;
 
         for (int i = 0; i < wave.spawnCount; i++)
         {
@@ -62,7 +64,7 @@ public class WaveSpawnerScript : MonoBehaviour
 
         if (waveNumber == waves.Length)
         {
-            Debug.Log("All waves completed!");
+            gameManager.WinLevel();
             this.enabled = false;
         }
     }
@@ -70,6 +72,5 @@ public class WaveSpawnerScript : MonoBehaviour
     void SpawnEnemy(GameObject enemy)
     {
         Instantiate(enemy, startSpawnPoint.position, startSpawnPoint.rotation);
-        enemyCounter++;
     }
 }

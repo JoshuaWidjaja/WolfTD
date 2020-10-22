@@ -6,7 +6,10 @@ public class GameManagerScript : MonoBehaviour
 {
     public static bool gameOverStatus;
     public GameObject gameOverUI;
-
+    public string nextLevel = "LevelTwoScene";
+    public int nextLevelInt = 2;
+    public SceneFaderScript sceneFader;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -37,5 +40,17 @@ public class GameManagerScript : MonoBehaviour
         gameOverStatus = true;
         gameOverUI.SetActive(true);
         
+    }
+
+    public void WinLevel()
+    {
+        Debug.Log("You beat the level!");
+        if (nextLevelInt > PlayerPrefs.GetInt("farthestLevelReach", 1))
+        {
+            PlayerPrefs.SetInt("farthestLevelReached", nextLevelInt);
+        }
+        sceneFader.FadeTo(nextLevel);
+
+
     }
 }

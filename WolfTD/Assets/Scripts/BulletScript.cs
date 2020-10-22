@@ -2,23 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script handles the mechanics for projectiles shot by turrets.
 public class BulletScript : MonoBehaviour
 {
+    //Initializing variables
 
-    private Transform target;
-    
     public float speed = 60f;
     public float blastRadius = 0;
     public int damage = 50;
     public GameObject impactEffectPrefab;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Transform target;
 
     // Update is called once per frame
+    //If no target exists, destroy the projectile. Else, move the projectile toward the target. If we are close enough to the target, call HitTarget().
     void Update()
     {
         if (target == null)
@@ -39,6 +36,10 @@ public class BulletScript : MonoBehaviour
         transform.LookAt(target);
     }
 
+
+    // ************ HELPER FUNCTIONS ************
+
+    //Displays particle effects for the projectile on impact. Damages the enemy, and then destroys the particles and the projectile object.
     void HitTarget()
     {
         GameObject bulletEffects = (GameObject)Instantiate(impactEffectPrefab, transform.position, transform.rotation);
@@ -56,6 +57,7 @@ public class BulletScript : MonoBehaviour
         Destroy(gameObject);
     }
 
+    //Helper function that calls the takeDamage functions located in Enemy script to have unit take damage based on projectile hit.
     void DamageEnemy(Transform enemy)
     {
         EnemyScript typeEnemy = enemy.GetComponent<EnemyScript>();
@@ -65,8 +67,10 @@ public class BulletScript : MonoBehaviour
        
     }
 
+    //Creates collider array that takes in all objects overlapping the area. If any of the objects has tag Enemy, call DamageEnemy function on that location
     void Explode()
     {
+        
         Collider[] colliders = Physics.OverlapSphere(transform.position, blastRadius);
         foreach (Collider collider in colliders)
         {
@@ -77,13 +81,17 @@ public class BulletScript : MonoBehaviour
         }
     }
 
+    //Causes the turret to "look" in the direction of the target.
+    public void SeekTarget(Transform targetObject)
+    {
+        target = targetObject;
+    }
+
+    //Debugging function, used to see explosion range of the missile projectile when selected
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, blastRadius);
     }
-    public void SeekTarget(Transform targetObject)
-    {
-        target = targetObject;
-    }
+    
 }

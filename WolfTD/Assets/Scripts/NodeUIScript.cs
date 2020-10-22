@@ -53,12 +53,12 @@ public class NodeUIScript : MonoBehaviour
     public void Upgrade()
     {
         targetNode.UpgradeTurret();
-        BuildManagerScript.instance.deselectNode();
+        BuildManagerScript.instance.DeselectNode();
     }
 
     public void Sell()
     {
         targetNode.SellTurret();
-        BuildManagerScript.instance.deselectNode();
+        BuildManagerScript.instance.DeselectNode();
     }
 }

@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script handles camera behavior and control in the game.
 public class CameraControllerScript : MonoBehaviour
 {
+    //Initializing variables
     public float panningSpeed = 30f;
     public float panningBorderThickness = 15f;
     public float scrollSpeed = 5f;
@@ -12,13 +14,10 @@ public class CameraControllerScript : MonoBehaviour
 
     //private bool movementEnabled = true;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
+    //Checks to see if the game is on a gameOver. If it is, disables player control of the camera.
+    //Also contains code for WASD control for camera movement, as well as mouse scroll wheel for zooming in and out
     void Update()
     {
         if (GameManagerScript.gameOverStatus == true)
@@ -26,6 +25,8 @@ public class CameraControllerScript : MonoBehaviour
             this.enabled = false;
             return;
         }
+
+        //DEBUGGING code, allows player to take control/end control by pressing escape
         /*if (Input.GetKeyDown(KeyCode.Escape))
         {
             movementEnabled = !movementEnabled;
@@ -59,6 +60,7 @@ public class CameraControllerScript : MonoBehaviour
         float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
         Vector3 position = transform.position;
         position.y -= scrollWheel * 1000 * scrollSpeed * Time.deltaTime;
+        //minY and maxY are the min and max player is allowed to zoom in and out.
         position.y = Mathf.Clamp(position.y, minY, maxY);
         transform.position = position;
     }
