@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\NodeUIScript.cs" />
     <Compile Include="Assets\Scripts\PauseMenuScript.cs" />
     <Compile Include="Assets\Scripts\PlayerInfoScript.cs" />
+    <Compile Include="Assets\Scripts\RoundSurvivedScript.cs" />
     <Compile Include="Assets\Scripts\SceneFaderScript.cs" />
     <Compile Include="Assets\Scripts\ShopScript.cs" />
     <Compile Include="Assets\Scripts\TurretBlueprintScript.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Assets\Scripts\WaveClassScript.cs" />
     <Compile Include="Assets\Scripts\WaveSpawnerScript.cs" />
     <Compile Include="Assets\Scripts\WaypointScript.cs" />
+    <Compile Include="Assets\Scripts\WinLevelScript.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Joshua Widjaja/Desktop/Personal Projects/ProjWolfTD/WolfTD/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

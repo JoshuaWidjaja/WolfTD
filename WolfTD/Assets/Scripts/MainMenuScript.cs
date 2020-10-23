@@ -3,22 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Script that handles behavior of everything in the Main Menu scene.
+
+
 public class MainMenuScript : MonoBehaviour
 {
+    //Initializing variables
     public SceneFaderScript sceneFader;
-    public string loadedLevel = "LevelScene";
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string loadedLevel = "LevelSelect";
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
+    // ************ HELPER FUNCTIONS ************
+    //When Play button is pressed, sceneFader loads the level select screen.
     public void Play()
     {
         // Debug.Log("Play pressed");
@@ -26,6 +22,8 @@ public class MainMenuScript : MonoBehaviour
         sceneFader.FadeTo(loadedLevel);
     }
 
+
+    //When Quit is pressed, game ends (In the Unity Inspector, displays a Debug.Log statement instead).
     public void Quit()
     {
         Debug.Log("Quit button pressed!");

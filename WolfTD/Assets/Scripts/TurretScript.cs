@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
-
+//Turret script contains the information needed for the turret to function as well as the default stats for each different turret.
 public class TurretScript : MonoBehaviour
 {
+    //Initializing variables that every turret will have.
     private Transform target;
     private EnemyScript targetEnemy;
     
-    
+    //Bullet Attributes apply to non-laser turrets while laser attributes apply to the laser turrets.
     [Header("General Attributes")]
     public float turretRange = 15f;
     
@@ -26,7 +27,7 @@ public class TurretScript : MonoBehaviour
     public ParticleSystem impactEffect;
     public Light impactLight;
 
-
+    //Sets up the enemyTag so that we can easily tag all enemies, allowing turrets to accurately behave by facing them and firing at them.
     [Header("Unity Setup")]
     public string enemyTag = "Enemy";
     public Transform rotatingObject;
@@ -37,12 +38,17 @@ public class TurretScript : MonoBehaviour
 
 
     // Start is called before the first frame update
+    //Checks to see if we should update the target 3 times a frame
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.33f);
+       
     }
 
     // Update is called once per frame
+    //If there is no target, we stop firing any projectile and return. Else, we lock on to that target.
+    //If type of turret is a laser turret, we call the Laser() functions, else, we call Shoot() to fire a projectile.
+    //Fire rate of projectile depends on the fireRate of the turret.
     void Update()
     {
         if (target == null)
@@ -59,7 +65,7 @@ public class TurretScript : MonoBehaviour
             return;
         }
 
-        lockTarget();
+        LockTarget();
 
         if (useLaser)
         {
@@ -79,13 +85,15 @@ public class TurretScript : MonoBehaviour
     }
     
 
-
+    //Debugging funtions that displays the range of turrets when clicked on.
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, turretRange);
     }
 
+    //This functions creates an array of enemies that are currently in the game. Then it calculates the shortest distance from each turret to each enemy in the array.
+    //If no enemies exist, we set target value to null, and don't need to fire. Else, turret sets target to the closest enemy.
     void UpdateTarget()
     {
         GameObject[] enemyList = GameObject.FindGameObjectsWithTag(enemyTag);
@@ -113,13 +121,16 @@ public class TurretScript : MonoBehaviour
         }
     }
 
-    void lockTarget()
+    //This functions makes it so that the turret will look in the direction of the target and rotate in the direction that target moves.
+    void LockTarget()
     {
         Vector3 direction = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         Vector3 rotationVal = Quaternion.Lerp(rotatingObject.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         rotatingObject.rotation = Quaternion.Euler(0, rotationVal.y, 0);
     }
+
+    //Shoot function shoots a bullet/missile projectile towards the target.
     void Shoot()
     {
         GameObject bulletGameObject = (GameObject)Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
@@ -129,13 +140,14 @@ public class TurretScript : MonoBehaviour
         {
             bullet.SeekTarget(target);
         }
-
-       
     }
+
+    //Laser functions is fore laser turrets. Shoots in direction of target and slows them based on the slowAmount of the turret.
+    //Also enables the lineRenderer, which is the laser itself and makes sure that the laser is always going towards the center of the target.
     void Laser()
     {
-        targetEnemy.takeDamage(damageTick * Time.deltaTime);
-        targetEnemy.slowEffect(slowAmount);
+        targetEnemy.TakeDamage(damageTick * Time.deltaTime);
+        targetEnemy.SlowEffect(slowAmount);
         if (!lineRenderer.enabled)
         {
             lineRenderer.enabled = true;

@@ -63,7 +63,7 @@ public class BuildManagerScript : MonoBehaviour
         }
         selectedNode = node;
         selectedTurretType = null;
-        nodeUI.setTarget(node);
+        nodeUI.SetTarget(node);
     }
 
 
@@ -71,7 +71,7 @@ public class BuildManagerScript : MonoBehaviour
     public void DeselectNode()
     {
         selectedNode = null;
-        nodeUI.hideUI();
+        nodeUI.HideUI();
     }
 
     //Helper function utilized in the Node script to return the correct turret to build in the node. 

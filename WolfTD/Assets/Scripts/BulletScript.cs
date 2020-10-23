@@ -62,7 +62,7 @@ public class BulletScript : MonoBehaviour
     {
         EnemyScript typeEnemy = enemy.GetComponent<EnemyScript>();
         if (typeEnemy != null){
-            typeEnemy.takeDamage(damage);
+            typeEnemy.TakeDamage(damage);
         }
        
     }

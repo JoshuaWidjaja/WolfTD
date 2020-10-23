@@ -60,7 +60,7 @@ public class CameraControllerScript : MonoBehaviour
         float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
         Vector3 position = transform.position;
         position.y -= scrollWheel * 1000 * scrollSpeed * Time.deltaTime;
-        //minY and maxY are the min and max player is allowed to zoom in and out.
+        //minY and maxY are the min and max player is allowed to zoom in and out.   
         position.y = Mathf.Clamp(position.y, minY, maxY);
         transform.position = position;
     }

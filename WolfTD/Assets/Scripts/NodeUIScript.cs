@@ -3,32 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-
+//Script handles the UI for turrets when clicked on a node. Sets the UI for Upgrade and Sell text.
 public class NodeUIScript : MonoBehaviour
 {
+    //Intializing variables
     public GameObject UI;
-    private NodeScript targetNode;
     public Text upgradeCost;
     public Text sellCost;
     public Button upgradeButton;
+    private NodeScript targetNode;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void setTarget(NodeScript target)
+    //Gets the position of the selected node, then displays the UI and the correct text based on whether the turret on that node is upgraded or not.
+    public void SetTarget(NodeScript target)
     {
         targetNode = target;
-        transform.position = targetNode.getPosition();
+        transform.position = targetNode.GetPosition();
 
         if (targetNode.isUpgraded == false)
         {
@@ -45,17 +34,22 @@ public class NodeUIScript : MonoBehaviour
         UI.SetActive(true);
     }
 
-    public void hideUI()
+
+    //Helper function that hides the UI when node is deselected.
+    public void HideUI()
     {
         UI.SetActive(false);
     }
 
+
+    //Function called when upgrade button is clicked on node, calls the UpgradeTurret() function in the NodeScript file and then deselects the node.
     public void Upgrade()
     {
         targetNode.UpgradeTurret();
         BuildManagerScript.instance.DeselectNode();
     }
 
+    //Function called when the sell button is clicked. Calls the SellTurret() function in the NodeScript file and then deselects the node.
     public void Sell()
     {
         targetNode.SellTurret();
