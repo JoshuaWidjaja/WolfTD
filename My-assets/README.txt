@@ -1,4 +1,4 @@
-This pack of assets was downloaded from http://devassets.com/. Thank you to them for supply free assets for the community to use.
+This pack of assets was downloaded from http://devassets.com/. Thank you to them for supplying free assets for the community to use.
 
 -- GUIDELINES --
 
