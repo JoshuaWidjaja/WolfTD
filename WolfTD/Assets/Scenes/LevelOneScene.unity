@@ -7787,12 +7787,12 @@ MonoBehaviour:
   - enemy: {fileID: 5738330081797560897, guid: 5c30f8607d6dca847a8fe40de0605b86, type: 3}
     spawnCount: 8
     spawnRate: 2
+  - enemy: {fileID: 5738330081797560897, guid: 5c30f8607d6dca847a8fe40de0605b86, type: 3}
+    spawnCount: 15
+    spawnRate: 2
   - enemy: {fileID: 5738330081797560897, guid: 5630e7ea3710f8448a05964a9bbaa0eb, type: 3}
-    spawnCount: 3
+    spawnCount: 5
     spawnRate: 1
-  - enemy: {fileID: 5738330081797560897, guid: 26339d4b4569d5f45821ccbe9d226754, type: 3}
-    spawnCount: 20
-    spawnRate: 4
   startSpawnPoint: {fileID: 1133078731}
   countdownText: {fileID: 2091455672}
   defaultTimer: 5
@@ -7840,8 +7840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4432fd1dffe214f40ac690f40eba89af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingCurrency: 999
-  startingLives: 1
+  startingCurrency: 15
+  startingLives: 5
 --- !u!114 &588463375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13118,6 +13118,36 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SelectLaserTurret
       objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.43721077
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.7075472
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.4670735
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0.3231922
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.9137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.29019606
+      objectReference: {fileID: 0}
     - target: {fileID: 1786611265267281801, guid: 63981f587e413674aa5c2c74dc90ce16,
         type: 3}
       propertyPath: m_Sprite
@@ -17492,6 +17522,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SelectMissileTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.43721077
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.7075472
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.4670735
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0.3231922
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.9137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.29019606
       objectReference: {fileID: 0}
     - target: {fileID: 1786611265267281801, guid: 63981f587e413674aa5c2c74dc90ce16,
         type: 3}
@@ -25197,6 +25257,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SelectStandardTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0.3231922
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.9137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.29019606
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.43721077
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.7075472
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786611265267281800, guid: 63981f587e413674aa5c2c74dc90ce16,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.4670735
       objectReference: {fileID: 0}
     - target: {fileID: 1786611265267281805, guid: 63981f587e413674aa5c2c74dc90ce16,
         type: 3}
