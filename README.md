@@ -7,7 +7,7 @@ WolfTD is a simple Tower Defense game created in Unity. As of right now the game
 * Different enemy variants and levels
 * Retry functionality for levels
 
-You can try out the game by clicking the link: https://themightywolfe.itch.io/wolftd
+You can try out the game by clicking the link: https://themightywolfe.itch.io/wolftd or by downloading it from the Github releases section to the right of the repo page.
 
 Simply download the ZIP file and launch the file titled WolfTD.exe
 
