@@ -20,7 +20,7 @@ public class WinLevelScript : MonoBehaviour
         sceneFader.FadeTo(nextLevel);
     }
 
-    //If menu is clicked, fades back to the main menu.
+    //If menu is clicked, fades back to the main menu. 
     public void Menu()
     {
         sceneFader.FadeTo(menuScene);

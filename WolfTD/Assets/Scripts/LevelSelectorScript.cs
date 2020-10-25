@@ -8,6 +8,7 @@ public class LevelSelectorScript : MonoBehaviour
 {
     //Initializing variables and Button array.
     public SceneFaderScript sceneFader;
+    public string menuScene = "MainMenuScene";
 
     public Button[] levelButtons;
     // Start is called before the first frame update
@@ -31,5 +32,10 @@ public class LevelSelectorScript : MonoBehaviour
     public void Select(string levelName)
     {
         sceneFader.FadeTo(levelName);
+    }
+
+    public void Menu()
+    {
+        sceneFader.FadeTo(menuScene);
     }
 }

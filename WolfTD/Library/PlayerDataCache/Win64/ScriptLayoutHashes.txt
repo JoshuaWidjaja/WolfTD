@@ -5,6 +5,8 @@ SceneListBegin?
 Assets/Scenes/MainMenuScene.unity
 Assets/Scenes/LevelSelect.unity
 Assets/Scenes/LevelOneScene.unity
+Assets/Scenes/LevelTwoScene.unity
+Assets/Scenes/LevelThreeScene.unity
 SceneListEnd?
 3c08375166df118bd1801438fc36b92f Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 77c21079ace8d76ce6e941d3dabbfe6e Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -126,7 +128,7 @@ e18741e1149d9b075f204072552ecd77 Assembly-CSharp.dll:.WinLevelScript
 ba2c7a772d4c454bb584ffb5c2386f33 Assembly-CSharp.dll:.BuildManagerScript
 b8a5e8091ab0b8861d2add371082c5e0 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 3ae04145302af06e6046ae7c51c4221d Assembly-CSharp.dll:.PauseMenuScript
-ae18927a88b6b0a18f6899cdce3f3c06 Assembly-CSharp.dll:.LevelSelectorScript
+f25e37cd3166c59026a63d2ece180876 Assembly-CSharp.dll:.LevelSelectorScript
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator

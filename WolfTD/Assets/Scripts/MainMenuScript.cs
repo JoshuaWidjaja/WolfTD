@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-//Script that handles behavior of everything in the Main Menu scene.
+//Script that handles behavior of everything in the Main Menu scene. Also allows user to go back from level select back to the menu.
 
 
 public class MainMenuScript : MonoBehaviour
@@ -11,6 +11,8 @@ public class MainMenuScript : MonoBehaviour
     //Initializing variables
     public SceneFaderScript sceneFader;
     public string loadedLevel = "LevelSelect";
+    
+
 
 
     // ************ HELPER FUNCTIONS ************
@@ -29,4 +31,6 @@ public class MainMenuScript : MonoBehaviour
         Debug.Log("Quit button pressed!");
         Application.Quit();
     }
+
+    
 }
