@@ -4,3 +4,5 @@ There you can find folders that contain the different animations for turrets and
 object colors/materials, programming scripts, and more.
 
 Other folders and files are folders created by Unity to assist in setting up and creating the project.
+
+Most future changes will typically be applied to the Assets folder.
