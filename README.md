@@ -1,6 +1,4 @@
 # WolfTD
-![Screenshot](My-assets/WolfTD_thumbnail.png)
-
 WolfTD is a simple Tower Defense game created in Unity. As of right now the game is fully functional and features the following. I'd like to add some more to the game, given the time.
 
 * 3 different types of turrets
@@ -29,3 +27,6 @@ Most of the game is controllable by using the mouse.
 WASD allows player to move the camera up, down, left, and right as needed.
 
 ESCAPE brings up the menu in game.
+
+
+![Screenshot](My-assets/WolfTD_thumbnail.png)
